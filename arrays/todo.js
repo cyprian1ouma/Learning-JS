@@ -29,3 +29,74 @@ todo.forEach((item,index)=>{
 // for(let todos = 0;todos< todo.length;todos++){
 //     console.log(`${todos + 1} . ${todo[todos]}`);
 // }
+
+const todos = [
+    { 
+      title: "Buy groceries", 
+      description: "Get milk, eggs, bread, and fruits from the supermarket", 
+      completed: false 
+    },
+    { 
+      title: "Finish JavaScript homework", 
+      description: "Complete array and object practice exercises", 
+      completed: true 
+    },
+    { 
+      title: "Clean the house", 
+      description: "Vacuum the living room, wash dishes, and tidy up bedrooms", 
+      completed: false 
+    },
+    { 
+      title: "Pay electricity bill", 
+      description: "Log in to the online portal and pay before the deadline", 
+      completed: true 
+    },
+    { 
+      title: "Read a new book", 
+      description: "Start with chapter 1 of 'Atomic Habits'", 
+      completed: false 
+    },
+    { 
+      title: "Practice coding challenges", 
+      description: "Solve at least 3 algorithm problems on LeetCode", 
+      completed: true 
+    },
+    { 
+      title: "Go for a morning run", 
+      description: "Run 3 kilometers around the park", 
+      completed: false 
+    },
+    { 
+      title: "Call mom", 
+      description: "Check in and ask how she’s doing", 
+      completed: true 
+    },
+    { 
+      title: "Prepare dinner", 
+      description: "Cook pasta with chicken and vegetables", 
+      completed: false 
+    },
+    { 
+      title: "Organize study desk", 
+      description: "Arrange books, clean dust, and sort notes", 
+      completed: true 
+    }
+  ]
+  
+
+  const sortTodos = function(todos){
+     todos.sort(function(a,b){
+        if(!a.completed==="false" && b.completed==="true"){
+            return -1
+        }else if(!b.completed==="false" && a.completed==="true"){
+            return 1
+        }else{
+            return 0
+        }
+     })
+     
+  }
+
+  sortTodos(todos)
+  console.log(todos);
+  
